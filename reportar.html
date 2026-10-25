@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportar rescate | Sistema de Rescate Animal</title>
+</head>
+<body>
+
+    <header>
+        <h1>Sistema de Control de Rescate y Adopción Animal</h1>
+        <p>Formulario de reporte de rescate</p>
+    </header>
+
+    <nav aria-label="Navegación principal">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="reportar.html" aria-current="page">Reportar rescate</a></li>
+            <li><a href="rescates.html">Consultar rescates</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Formulario de rescate</h2>
+
+            <form action="#" method="get">
+                <fieldset>
+                    <legend>Información del reporte</legend>
+
+                    <p>
+                        <label for="titulo">Título del reporte:</label>
+                        <input type="text" id="titulo" name="titulo"
+                               required maxlength="100">
+                    </p>
+
+                    <p>
+                        <label for="especie">Categoría del animal:</label>
+                        <select id="especie" name="especie" required>
+                            <option value="">Seleccione una categoría</option>
+                            <option value="perro">Perro</option>
+                            <option value="gato">Gato</option>
+                            <option value="fauna-silvestre">Fauna silvestre</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="ubicacion">Ubicación del rescate:</label>
+                        <input type="text" id="ubicacion" name="ubicacion"
+                               required minlength="5" maxlength="200">
+                    </p>
+
+                    <p>
+                        <label for="fecha">Fecha del reporte:</label>
+                        <input type="date" id="fecha" name="fecha" required>
+                    </p>
+
+                    <fieldset>
+                        <legend>Prioridad del rescate</legend>
+
+                        <input type="radio" id="alta" name="prioridad"
+                               value="alta" required>
+                        <label for="alta">Alta</label>
+
+                        <input type="radio" id="media" name="prioridad"
+                               value="media">
+                        <label for="media">Media</label>
+
+                        <input type="radio" id="baja" name="prioridad"
+                               value="baja">
+                        <label for="baja">Baja</label>
+                    </fieldset>
+
+                    <p>
+                        <label for="descripcion">Descripción detallada:</label>
+                        <textarea id="descripcion" name="descripcion"
+                                  rows="5" cols="40" required
+                                  minlength="10" maxlength="1000"></textarea>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Información de quien reporta</legend>
+
+                    <p>
+                        <label for="reportante">Tipo de reportante:</label>
+                        <select id="reportante" name="reportante" required>
+                            <option value="">Seleccione una opción</option>
+                            <option value="ciudadano">Persona de la comunidad</option>
+                            <option value="voluntario">Voluntario</option>
+                            <option value="veterinario">Veterinario</option>
+                            <option value="refugio">Representante de un refugio</option>
+                        </select>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <button type="submit">Enviar reporte</button>
+                    <button type="reset">Limpiar formulario</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <address>Proyecto académico de Desarrollo de Sistemas Informáticos.</address>
+        <p>Autor: Hamilton Roger Mosquera Gonzalez.</p>
+    </footer>
+
+</body>
+</html>
